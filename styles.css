@@ -139,6 +139,11 @@ tr {
   border-top: 1px solid var(--color-stone-150);
 }
 
+hr {
+  width: 100%;
+  border-top: 1px solid var(--color-stone-150);
+}
+
 tr.first-row {
   border-top: none;
 }
