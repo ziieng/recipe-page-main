@@ -1,0 +1,166 @@
+:root {
+  --color-brown: hsl(14, 45%, 36%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(332, 100%, 98%);
+  --color-attribution-links: hsl(228, 45%, 44%);
+}
+
+@font-face {
+  font-family: Outfit; /* set name */
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf); /* url of the font */
+  font-style: normal; /* normal style */
+}
+
+@font-face {
+  font-family: "Young Serif"; /* set name */
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf); /* url of the font */
+  font-style: normal; /* normal style */
+}
+
+body {
+  background-color: var(--color-stone-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.content-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  max-width: 740px;
+  padding: 2.5rem;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Outfit, sans-serif;
+  color: var(--color-stone-600);
+}
+
+/* Mobile: remove border radius on the content wrapper for small screens */
+@media (max-width: 480px) {
+  main {
+    padding: 0px;
+  }
+  .content-wrapper {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Young Serif", serif;
+  color: var(--color-stone-900);
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Young Serif", serif;
+  color: var(--color-brown);
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+ul > li::marker {
+  font-size: 16px;
+  color: var(--color-brown);
+}
+
+ol > li::marker {
+  font-size: 16px;
+  color: var(--color-brown);
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+ol {
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+li > span {
+  position: relative;
+  left: 1rem;
+}
+
+.highlights {
+  background-color: var(--color-rose-50);
+  padding: 0 1.5rem;
+  margin-top: 20px;
+}
+
+.highlights > h2 {
+  font-family: Outfit, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-rose-800);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+tr {
+  border-top: 1px solid var(--color-stone-150);
+}
+
+tr.first-row {
+  border-top: none;
+}
+
+td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+td > strong {
+  color: var(--color-brown);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: var(--color-attribution-links);
+}
